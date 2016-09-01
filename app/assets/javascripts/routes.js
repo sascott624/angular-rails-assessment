@@ -17,5 +17,15 @@ angular
           template: '<p> some recipe directive </p>',
           controller: 'RecipesController as recipes'
         })
+        .state('ingredients', {
+          url: '/ingredients',
+          templateUrl: 'ingredients/ingredients.html',
+          controller: 'IngredientsController as ingredients'
+        })
+        .state('ingredients.id', {
+          url: '/:id',
+          template: '<p> some ingredient directive </p>',
+          controller: 'IngredientsController as ingredients'
+        })
         $urlRouterProvider.otherwise('home');
     });
