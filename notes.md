@@ -59,3 +59,6 @@ RECIPE-INGREDIENTS
 -ingredient_id
 -quantity (i.e. 3)
 -measurement (i.e. tbs, lbs, cups)
+
+belongs_to :recipe
+belongs_to :ingredient
