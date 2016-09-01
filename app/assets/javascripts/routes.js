@@ -7,10 +7,10 @@ angular
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
-        .state('welcome', {
-          url: '/welcome',
-          templateUrl: 'welcome/welcome.html',
-          controller: 'WelcomeController as welcome'
+        .state('recipes', {
+          url: '/recipes',
+          templateUrl: 'recipes/recipes.html',
+          controller: 'RecipesController as recipes'
         })
-        $urlRouterProvider.otherwise('welcome');
+        $urlRouterProvider.otherwise('home');
     });
