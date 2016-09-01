@@ -12,5 +12,10 @@ angular
           templateUrl: 'recipes/recipes.html',
           controller: 'RecipesController as recipes'
         })
+        .state('recipes.id', {
+          url: '/:id',
+          template: '<p> some recipe directive </p>',
+          controller: 'RecipesController as recipes'
+        })
         $urlRouterProvider.otherwise('home');
     });
