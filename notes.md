@@ -14,34 +14,6 @@ home.discover
 
 
 schema:
-RECIPE
--name
--description
--directions
--user_id
-
--has_many :recipe_ingredients
--has_many *ingredients []* through: recipe_ingredients
--belongs_to :user
-
-
-
-INGREDIENTS
--name
--type (i.e. dairy, fruit, vegetable, meat)
-
--has_many :recipe_ingredients
--has_many *recipes []* through: :recipe_ingredients
-
-
-
-RECIPE-INGREDIENTS
--recipe_id
--ingredient_id
--quantity (i.e. 3)
--measurement (i.e. tbs, lbs, cups)
-
-
 
 USER
 -first_name
@@ -50,4 +22,40 @@ USER
 
 has_many :recipes
 has_many :favorite_recipes
-has_many :favorites, through: :favorite_recipes
+has_many :favorites, through: :favorite_recipes, source: :recipe
+
+
+RECIPE
+-name
+-description
+-directions
+-user_id
+
+belongs_to :user
+has_many :favorite_recipes
+has_many :favorited_by, through: :favorite_recipes, source: :user
+has_many :recipe_ingredients
+has_many *ingredients []* through: recipe_ingredients
+
+
+FAVORITE-RECIPES
+-user_id
+-recipe_id
+
+belongs_to :user
+belongs_to :recipe
+
+
+INGREDIENTS
+-name
+-type (i.e. dairy, fruit, vegetable, meat)
+
+has_many :recipe_ingredients
+has_many *recipes []* through: :recipe_ingredients
+
+
+RECIPE-INGREDIENTS
+-recipe_id
+-ingredient_id
+-quantity (i.e. 3)
+-measurement (i.e. tbs, lbs, cups)
