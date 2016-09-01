@@ -1,13 +1,9 @@
 angular
     .module('app', ['templates', 'ui.router'])
-    .config(function($urlRouterProvider, $stateProvider) {
-        var homeState = {
-            name: 'home',
-            url: '/',
-            templateUrl: 'home/home.html',
-            controller: 'HomeController as vm'
-        }
-        $stateProvider.state(homeState);
+    .config(function($httpProvider) {
 
-        $urlRouterProvider.otherwise('/');
+        // for CSRF errors
+        $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+
+
     });
