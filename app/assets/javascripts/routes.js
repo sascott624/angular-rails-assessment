@@ -3,7 +3,7 @@ angular
     .config(function($urlRouterProvider, $stateProvider) {
       $stateProvider
         .state('home', {
-          url: '/',
+          url: '/home',
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
@@ -29,7 +29,7 @@ angular
           templateUrl: 'ingredients/ingredients.html',
           controller: 'IngredientsController as ingredients'
         })
-        .state('ingredients.id', {
+        .state('ingredient', {
           url: '/ingredients/:id',
           template: '<p> some ingredient directive </p>',
           controller: 'IngredientsController as ingredients'
