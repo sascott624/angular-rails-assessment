@@ -7,5 +7,10 @@ angular
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
-        $urlRouterProvider.otherwise('/');
+        .state('welcome', {
+          url: '/welcome',
+          templateUrl: 'welcome/welcome.html',
+          controller: 'WelcomeController as welcome'
+        })
+        $urlRouterProvider.otherwise('welcome');
     });
