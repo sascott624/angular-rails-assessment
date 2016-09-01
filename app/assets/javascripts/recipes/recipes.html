@@ -7,12 +7,14 @@
 <!-- and will include a link to view that specific recipe -->
 <!-- there should be an option to create a new recipe -->
 
-<div ui-view></div>
-
+<!-- this will be an ng-repeat of recipe in recipes.recipes -->
+<!-- showing recipe.name, recipe.user, recipe.description -->
 <ul>
   <li>"Recipe 1" by Some User
-    <p>recipe description</p>
+    <p><a href="" ui-sref='recipes.id'>recipe description</a></p>
+    <div ui-view></div>
   </li>
+  <!-- each recipe will include a ui-sref to link to its individual show view -->
 
   <li>"Recipe 2" by Some User
     <p>recipe description</p>
@@ -21,5 +23,5 @@
   <li>"Recipe 3" by Some User
     <p>recipe description</p>
   </li>
-  
+
 </ul>

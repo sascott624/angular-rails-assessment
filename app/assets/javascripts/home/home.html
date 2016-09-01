@@ -7,8 +7,10 @@
 <!-- here we'll ask the user to sign up or login -->
 <!-- if the user is logged in, it will display the user's info -->
 
-<h3><a href="" ui-sref='recipes'>Recipes</a></h3>
-<h3><a href="" ui-sref='ingredients'>Ingredients</a></h3>
-<h3>Discover</h3>
+<div class='homepage_links'>
+  <h3><a href="" ui-sref='home.recipes'>Recipes</a></h3>
+  <h3><a href="" ui-sref='home.ingredients'>Ingredients</a></h3>
+  <h3>Discover</h3>
+</div>
 
-<!-- is discover a button we press, or a header to a div that refreshes every x seconds? it'll show a recipe from the db selected at random -->
+<div ui-view></div>

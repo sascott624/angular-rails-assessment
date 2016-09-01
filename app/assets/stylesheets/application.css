@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ .homepage_links h3{
+   margin: 4em;
+   display: inline;
+ }
