@@ -1,6 +1,7 @@
-function RecipesController() {
-    var recipes = this;
-    recipes.test = 'this is where all recipes should go';
+function RecipesController(recipes) {
+    var vm = this;
+    // vm.recipes = recipes.data;
+    console.log(recipes);
 }
 
 angular

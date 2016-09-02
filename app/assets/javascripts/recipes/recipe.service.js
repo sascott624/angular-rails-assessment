@@ -1,6 +1,6 @@
-function RecipeService(){
+function RecipeService($http){
   this.getRecipes = function(){
-    console.log("testing recipe service")
+    return $http.get('/recipes.json');
   }
 }
 

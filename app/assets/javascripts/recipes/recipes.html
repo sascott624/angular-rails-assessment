@@ -9,18 +9,4 @@
 
 <!-- this will be an ng-repeat of recipe in recipes.recipes -->
 <!-- showing recipe.name, recipe.user, recipe.description -->
-<ul>
-  <li>"Recipe 1" by Some User
-    <p><a href="" ui-sref='recipe'>recipe description</a></p>
-  </li>
-  <!-- each recipe will include a ui-sref to link to its individual show view -->
-
-  <li>"Recipe 2" by Some User
-    <p><a href="" ui-sref='recipe'>recipe description</a></p>
-  </li>
-
-  <li>"Recipe 3" by Some User
-    <p><a href="" ui-sref='recipe'>recipe description</a></p>
-  </li>
-
-</ul>
+{{ vm.recipes }}

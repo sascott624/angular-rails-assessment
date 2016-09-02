@@ -10,7 +10,7 @@ angular
         .state('home.recipes', {
           url: '/recipes',
           templateUrl: 'recipes/recipes.html',
-          controller: 'RecipesController as recipes',
+          controller: 'RecipesController as vm',
           resolve: {
             recipes: function(RecipeService){
               return RecipeService.getRecipes();
