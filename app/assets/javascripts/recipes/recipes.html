@@ -1,15 +1,15 @@
 <h1>Recipes</h1>
-{{ recipes.test }}
 
-<!-- here we'll have an ng-repeat iterate through all of the recipes -->
-<!-- which will each be rendered via a recipe directive -->
-<!-- each recipe will show a recipe name, and its creater (user) -->
-<!-- and will include a link to view that specific recipe -->
 <!-- there should be an option to create a new recipe -->
 
-<!-- this will be an ng-repeat of recipe in recipes.recipes -->
-<!-- showing recipe.name, recipe.user, recipe.description -->
-
+<div>
+  <input
+    type="text"
+    ng-model='vm.search'
+    ng-change='vm.refilter()'
+    ng-model-options="{debounce: 500}"
+  />
+</div>
 <ul>
-  <li ng-repeat='recipe in vm.recipes'>{{ recipe.name }} <a href="/#/recipes/{{recipe.id}}">View</a></li>
+  <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <a href="/#/recipes/{{recipe.id}}">View</a></li>
 </ul>
