@@ -21,7 +21,7 @@ angular
           // we can then iterate through the recipes in recipes.html
         })
         .state('recipe', {
-          url: '/recipe/:id',
+          url: '/recipes/:id',
           templateUrl: 'recipes/recipe.html',
           controller: 'RecipesController as recipes'
           // here we'll add a resolve to request a @recipe with the id from the
