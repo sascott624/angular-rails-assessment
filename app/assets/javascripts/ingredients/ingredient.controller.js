@@ -1,6 +1,8 @@
-function IngredientController(){
+function IngredientController(ingredient){
   var vm = this;
-  this.hello = "hello!";
+  // vm.hello = "hello!";
+  vm.ingredient = ingredient.data;
+  console.log(vm.ingredient);
 }
 
 angular

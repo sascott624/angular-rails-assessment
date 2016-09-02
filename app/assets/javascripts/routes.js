@@ -38,9 +38,14 @@ angular
           }
         })
         .state('ingredient', {
-          url: '/ingredients/1',
+          url: '/ingredients/:id',
           templateUrl: 'ingredients/ingredient.html',
-          controller: 'IngredientController as ingredient'
+          controller: 'IngredientController as vm',
+          resolve: {
+            ingredient: function($stateParams, IngredientService){
+              return IngredientService.getIngredientById($stateParams.id);
+            }
+          }
         })
         $urlRouterProvider.otherwise('home');
     });
