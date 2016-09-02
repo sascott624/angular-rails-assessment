@@ -20,7 +20,7 @@ angular
         .state('recipe', {
           url: '/recipes/:id',
           templateUrl: 'recipes/recipe.html',
-          controller: 'RecipeController as recipe',
+          controller: 'RecipeController as vm',
           resolve: {
             recipe: function($stateParams, RecipeService){
               return RecipeService.getRecipeById($stateParams.id);

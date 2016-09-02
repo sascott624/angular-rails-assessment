@@ -1,14 +1,18 @@
-<h1>Recipe Name</h1>
-{{ recipe.hello }}
-<h3>by Recipe Creator</h3>
+<h1>{{ vm.recipe.name }}</h1>
 
-<p>Recipe description goes here</p>
+<h3>by {{ vm.recipe.user.first_name }} {{ vm.recipe.user.last_name }}</h3>
+
+<p>{{ vm.recipe.description }}</p>
 
 <h3>Ingredients</h3>
+<!-- once we have the ingredients serializer up and running, this will iterate -->
+<!-- through each of the recipe's ingredients -->
 <ul>
   <li>Recipe Ingredient 1, ingredient amount</li>
   <li>Recipe Ingredient 2, ingredient amount</li>
 </ul>
 
 <h3>Directions</h3>
-<p>The recipe directions go here</p>
+<p>{{ vm.recipe.directions }}</p>
+
+<div>Prev / Next buttons?</div>
