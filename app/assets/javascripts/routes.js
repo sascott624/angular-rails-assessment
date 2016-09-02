@@ -10,7 +10,12 @@ angular
         .state('home.recipes', {
           url: '/recipes',
           templateUrl: 'recipes/recipes.html',
-          controller: 'RecipesController as recipes'
+          controller: 'RecipesController as recipes',
+          resolve: {
+            recipes: function(RecipeService){
+              return RecipeService.getRecipes();
+            }
+          }
           // here we'll add a resolve to request @recipes from /recipes.json
           // the data (recipes) will be injected into our RecipesController
           // we can then iterate through the recipes in recipes.html
