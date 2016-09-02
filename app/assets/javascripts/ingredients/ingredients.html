@@ -4,10 +4,17 @@
 <!-- each list item will include a link to view that specific ingredient -->
 <!-- there should be an option to create a new ingredient -->
 
-<div>Search functionality goes here!</div>
+<div>
+  <input
+    type="text"
+    ng-model='vm.search'
+    ng-change='vm.refilter()'
+    ng-model-options='{debounce: 500}'
+  />
+</div>
 
 <ul>
-  <li ng-repeat='ingredient in vm.ingredients'>
+  <li ng-repeat='ingredient in vm.filteredIngredients'>
     <a href="" ui-sref='ingredient'>{{ingredient.name}}</a>
   </li>
 
