@@ -1,7 +1,6 @@
 function RecipesController(recipes, $filter) {
     var vm = this;
     vm.recipes = recipes.data;
-    console.log(vm.recipes);
     vm.search = '';
 
     vm.refilter = function(){

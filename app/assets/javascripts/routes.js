@@ -23,7 +23,7 @@ angular
         .state('recipe', {
           url: '/recipes/:id',
           templateUrl: 'recipes/recipe.html',
-          controller: 'RecipesController as recipes'
+          controller: 'RecipeController as recipe'
           // here we'll add a resolve to request a @recipe with the id from the
           // $state.params
           // this recipe we'll inject into RecipeController, which we can then
