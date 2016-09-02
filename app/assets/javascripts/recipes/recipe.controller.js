@@ -1,6 +1,7 @@
-function RecipeController() {
+function RecipeController(recipe) {
     var vm = this;
-    vm.hello = "testing";
+    vm.recipe = recipe.data;
+    console.log(vm.recipe);
 }
 
 angular

@@ -16,14 +16,16 @@ angular
               return RecipeService.getRecipes();
             }
           }
-          // here we'll add a resolve to request @recipes from /recipes.json
-          // the data (recipes) will be injected into our RecipesController
-          // we can then iterate through the recipes in recipes.html
         })
         .state('recipe', {
           url: '/recipes/:id',
           templateUrl: 'recipes/recipe.html',
-          controller: 'RecipeController as recipe'
+          controller: 'RecipeController as recipe',
+          resolve: {
+            recipe: function($stateParams, RecipeService){
+              return RecipeService.getRecipeById($stateParams.id);
+            }
+          }
           // here we'll add a resolve to request a @recipe with the id from the
           // $state.params
           // this recipe we'll inject into RecipeController, which we can then
