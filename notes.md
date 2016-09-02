@@ -62,3 +62,16 @@ RECIPE-INGREDIENTS
 
 belongs_to :recipe
 belongs_to :ingredient
+
+
+
+===============================================================================
+We have *most* of our recipe functionality up and running. TODO:
+1. Add prev / next buttons?
+2. Add angular form to create a new recipe (need to get our ingredients up and running first! Should be able to add/create ingredients during recipe creation - this also means we have to update our recipe_params to include ingredients_attributes, etc.)
+3. Need to display a recipe's ingredients in /recipes/:id - need to generate ingredients serializer / recipe-ingredients serializer in order to get access to this relationship via json
+4. Discover - select a recipe at random!
+
+5. Ingredient functionality (http calls, index, show view, search, create)
+
+6. User (signup/login/logout, favorites, dynamically update data through favoriting a recipe)

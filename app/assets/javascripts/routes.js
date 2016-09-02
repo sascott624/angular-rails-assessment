@@ -26,10 +26,6 @@ angular
               return RecipeService.getRecipeById($stateParams.id);
             }
           }
-          // here we'll add a resolve to request a @recipe with the id from the
-          // $state.params
-          // this recipe we'll inject into RecipeController, which we can then
-          // render in recipe.html
         })
         .state('home.ingredients', {
           url: '/ingredients',
