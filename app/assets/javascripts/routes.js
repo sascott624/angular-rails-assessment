@@ -38,9 +38,9 @@ angular
           }
         })
         .state('ingredient', {
-          url: '/ingredients/:id',
-          template: '<p> some ingredient directive </p>',
-          controller: 'IngredientsController as ingredients'
+          url: '/ingredients/1',
+          templateUrl: 'ingredients/ingredient.html',
+          controller: 'IngredientController as ingredient'
         })
         $urlRouterProvider.otherwise('home');
     });
