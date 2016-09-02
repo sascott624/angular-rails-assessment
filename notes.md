@@ -67,11 +67,13 @@ belongs_to :ingredient
 
 ===============================================================================
 We have *most* of our recipe functionality up and running. TODO:
-1. Add prev / next buttons?
+1. Fix next button - we're utilizing this on the individual recipe show page, which is controlled by the recipe controller, NOT the recipeS controller (which has access to the full data array, giving us a total length....)
 2. Add angular form to create a new recipe (need to get our ingredients up and running first! Should be able to add/create ingredients during recipe creation - this also means we have to update our recipe_params to include ingredients_attributes, etc.)
-3. Need to display a recipe's ingredients in /recipes/:id - need to generate ingredients serializer / recipe-ingredients serializer in order to get access to this relationship via json
+<!-- 3. Need to display a recipe's ingredients in /recipes/:id - need to generate ingredients serializer / recipe-ingredients serializer in order to get access to this relationship via json -->
 4. Discover - select a recipe at random!
 
 5. Ingredient functionality (http calls, index, show view, search, create)
 
-6. User (signup/login/logout, favorites, dynamically update data through favoriting a recipe)
+6. Is the ingredient show page necessary? Not a lot of information to render, unless we go back and offer the recipes that use that ingredient....
+
+7. User (signup/login/logout, favorites, dynamically update data through favoriting a recipe)

@@ -3,12 +3,15 @@
 <!-- there should be an option to create a new recipe -->
 
 <div>
-  <input
+  Search Recipes <input
     type="text"
     ng-model='vm.search'
     ng-change='vm.refilter()'
     ng-model-options="{debounce: 500}"
   />
+
+  Add a New Recipe!
+  
 </div>
 <ul class='recipe_list'>
   <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <em> by </em><span> {{ recipe.user.first_name}} {{ recipe.user.last_name}}</span>
