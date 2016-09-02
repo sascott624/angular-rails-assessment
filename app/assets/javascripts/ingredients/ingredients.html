@@ -7,10 +7,8 @@
 <div>Search functionality goes here!</div>
 
 <ul>
-  <li><a href="" ui-sref='ingredient'>Ingredient 1</a></li>
-
-  <li><a href="" ui-sref='ingredient'>Ingredient 2</a></li>
-
-  <li><a href="" ui-sref='ingredient'>Ingredient 3</a></li>
+  <li ng-repeat='ingredient in vm.ingredients'>
+    <a href="" ui-sref='ingredient'>{{ingredient.name}}</a>
+  </li>
 
 </ul>

@@ -30,7 +30,7 @@ angular
         .state('home.ingredients', {
           url: '/ingredients',
           templateUrl: 'ingredients/ingredients.html',
-          controller: 'IngredientsController as ingredients',
+          controller: 'IngredientsController as vm',
           resolve: {
             ingredients: function(IngredientService){
               return IngredientService.getIngredients();
