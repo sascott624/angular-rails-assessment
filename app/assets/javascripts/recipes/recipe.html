@@ -8,9 +8,12 @@
 <!-- once we have the ingredients serializer up and running, this will iterate -->
 <!-- through each of the recipe's ingredients -->
 <ul>
-  <li>Recipe Ingredient 1, ingredient amount</li>
-  <li>Recipe Ingredient 2, ingredient amount</li>
+  <li ng-repeat="i in vm.recipe.recipe_ingredients">
+    {{i.ingredient.name}} - {{ i.quantity }} {{ i.measurement}}
+  </li>
 </ul>
+
+<!-- {{ vm.recipe.recipe_ingredients}} -->
 
 <h3>Directions</h3>
 <p>{{ vm.recipe.directions }}</p>
