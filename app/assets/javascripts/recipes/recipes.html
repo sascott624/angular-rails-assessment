@@ -10,6 +10,8 @@
     ng-model-options="{debounce: 500}"
   />
 </div>
-<ul>
-  <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <a href="/#/recipes/{{recipe.id}}">View</a></li>
+<ul class='recipe_list'>
+  <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <em> by </em><span> {{ recipe.user.first_name}} {{ recipe.user.last_name}}</span>
+    <p> {{ recipe.description }} <a href="/#/recipes/{{recipe.id}}">View</a></p>
+  </li>
 </ul>
