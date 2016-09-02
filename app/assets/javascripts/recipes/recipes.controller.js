@@ -1,7 +1,7 @@
 function RecipesController(recipes) {
     var vm = this;
-    // vm.recipes = recipes.data;
-    console.log(recipes);
+    vm.recipes = recipes.data;
+    // console.log(recipes.data);
 }
 
 angular
