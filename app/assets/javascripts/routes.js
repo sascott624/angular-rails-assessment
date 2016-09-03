@@ -37,8 +37,8 @@ angular
             }
           }
         })
-        .state('ingredient', {
-          url: '/ingredients/:id',
+        .state('home.ingredients.id', {
+          url: '/:id',
           templateUrl: 'ingredients/ingredient.html',
           controller: 'IngredientController as vm',
           resolve: {
