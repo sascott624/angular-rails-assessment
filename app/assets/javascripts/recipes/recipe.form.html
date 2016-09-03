@@ -1,7 +1,7 @@
-<form name='new_recipe_form'>
+<form name='new_recipe_form' ng-submit='vm.submit()'>
   Name: <input ng-model='vm.name' /><br>
   Description: <input type="text" ng-model='vm.description' /><br>
   Directions: <input type="text" ng-model='vm.directions' /><br>
-  <input type="submit"><br>
+  <input type="submit" value="Create Recipe">
 
 </form>
