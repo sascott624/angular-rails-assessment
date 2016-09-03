@@ -17,8 +17,8 @@ angular
             }
           }
         })
-        .state('recipe', {
-          url: '/recipes/:id',
+        .state('home.recipes.id', {
+          url: '/:id',
           templateUrl: 'recipes/recipe.html',
           controller: 'RecipeController as vm',
           resolve: {

@@ -10,11 +10,15 @@
     ng-model-options="{debounce: 500}"
   />
 
-  Add a New Recipe!
-  
-</div>
-<ul class='recipe_list'>
-  <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <em> by </em><span> {{ recipe.user.first_name}} {{ recipe.user.last_name}}</span>
-    <p> {{ recipe.description }} <a href="/#/recipes/{{recipe.id}}">View</a></p>
-  </li>
-</ul>
+  <div class='recipe_view' ui-view></div>
+
+
+  <ul class='recipe_list'>
+    <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <em> by </em><span> {{ recipe.user.first_name}} {{ recipe.user.last_name}}</span>
+      <p> {{ recipe.description }} <a href="/#/home/recipes/{{recipe.id}}">View</a></p>
+      Tried? <input type="checkbox" ng-model='recipe.tried' > {{recipe.tried}}
+    </li>
+  </ul>
+
+  <button ng-click='vm.showNewRecipeForm()'>Add a New Recipe!</button>
+  <div id='new_recipe_button' style='display:none' > adding </div>
