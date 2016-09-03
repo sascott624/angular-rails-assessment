@@ -1,14 +1,15 @@
-<h1>Recipes</h1>
+<h1 class='orange'>Recipes</h1>
 
 <!-- there should be an option to create a new recipe -->
 
-<div>
+<div class='dark_blue'>
   Search Recipes <input
     type="text"
     ng-model='vm.search'
     ng-change='vm.refilter()'
     ng-model-options="{debounce: 500}"
   />
+</div>
 
   <div class='recipe_view' ui-view></div>
 
@@ -20,5 +21,5 @@
     </li>
   </ul>
 
-  <button ng-click='vm.showNewRecipeForm()'>Add a New Recipe!</button>
-  <div id='new_recipe_button' style='display:none' > adding </div>
+  <button><a href="/#/home/recipes/new">Add a New Recipe!</a></button>
+    <!-- <recipe-form-directive></recipe-form-directive> -->

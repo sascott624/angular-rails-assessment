@@ -17,6 +17,11 @@ angular
             }
           }
         })
+        .state('recipes.new', {
+          url: '/new',
+          templateUrl: 'recipes/recipe.formhtml',
+          controller: 'RecipeFormController as vm',
+        })
         .state('home.recipes.id', {
           url: '/:id',
           templateUrl: 'recipes/recipe.html',
@@ -47,5 +52,6 @@ angular
             }
           }
         })
+
         $urlRouterProvider.otherwise('home');
     });

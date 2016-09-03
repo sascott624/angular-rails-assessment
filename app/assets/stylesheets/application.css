@@ -14,9 +14,65 @@
  *= require_self
  */
 
- .homepage_links h3{
-   margin: 4em;
+
+ *{
+   background-color: #FFF5C3;
+ }
+
+.orange {
+  color: #FF7260;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.dark_blue {
+  color: #129793;
+  font-style: italic;
+  font-family: cursive;
+}
+
+.light_blue {
+  color: #9BD7D5;
+  font-family: monospace;
+  font-style: normal;
+}
+
+.fancy {
+  font-size: 6em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0.5;
+}
+
+.fancy + p{
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.list_title {
+  margin-left: 6em;
+}
+
+.homepage_links {
+  text-align: center;
+}
+
+.homepage_links a{
+   margin: 2em;
    display: inline;
+   font-size: 2em;
+ }
+
+ a:link{
+   color: #9BD7D5;
+   font-family: monospace;
+   font-style: normal;
+ }
+
+ a:visited{
+   color: #129793;
+   font-family: monospace;
+   font-style: normal;
  }
 
 .recipe_view {
