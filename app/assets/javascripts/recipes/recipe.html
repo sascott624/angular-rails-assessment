@@ -1,4 +1,4 @@
-<div ng-include="'home/navbar.html'"></div>
+<!-- <div ng-include="'home/navbar.html'"></div> -->
 
 <h1>{{ vm.recipe.name }}</h1>
 
@@ -7,8 +7,6 @@
 <p>{{ vm.recipe.description }}</p>
 
 <h3>Ingredients</h3>
-<!-- once we have the ingredients serializer up and running, this will iterate -->
-<!-- through each of the recipe's ingredients -->
 <ul>
   <li ng-repeat="i in vm.recipe.recipe_ingredients">
     {{i.ingredient.name}} - {{ i.quantity }} {{ i.measurement}}

@@ -1,9 +1,10 @@
 function RecipeService($http){
-  this.getRecipes = function(){
+  var vm = this;
+  vm.getRecipes = function(){
     return $http.get('/recipes.json');
   };
 
-  this.getRecipeById = function(id){
+  vm.getRecipeById = function(id){
     return $http.get('/recipes/' + id + '.json');
   }
 }

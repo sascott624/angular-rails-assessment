@@ -32,6 +32,20 @@ angular
             }
           }
         })
+        .state('home.discover', {
+          url: '/discover',
+          templateUrl: 'recipes/recipe.html',
+          controller: 'DiscoverController as vm',
+          resolve: {
+            recipes: function(RecipeService){
+              return RecipeService.getRecipes();
+            },
+            recipe: function(RecipeService, recipes){
+              var quantity = Math.floor(Math.random() * recipes.data.length) + 1
+              return RecipeService.getRecipeById(quantity);
+            }
+          }
+        })
         .state('home.ingredients', {
           url: '/ingredients',
           templateUrl: 'ingredients/ingredients.html',

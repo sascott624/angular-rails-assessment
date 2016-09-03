@@ -9,9 +9,6 @@ function RecipesController(recipes, $filter) {
 
     vm.refilter();
 
-    vm.showNewRecipeForm = function(){
-      document.getElementById('new_recipe_button').style.display = 'block';
-    }
 }
 
 angular
