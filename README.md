@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to your Recipe Keeper! A single page application that allows you to view a recipes, ingredients, and add your own, as well as discover a recipe you might not know about.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To get started, clone this repository and run ```bundle install```, followed by ```rake db:migrate``` to set up the database. Finally, run ```rake db:seed``` to seed your database with some recipes and ingredients to start.
