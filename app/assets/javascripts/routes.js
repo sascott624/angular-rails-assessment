@@ -17,9 +17,9 @@ angular
             }
           }
         })
-        .state('recipes.new', {
-          url: '/new',
-          templateUrl: 'recipes/recipe.formhtml',
+        .state('home.new-recipe', {
+          url: '/new-recipe',
+          templateUrl: 'recipes/recipe.form.html',
           controller: 'RecipeFormController as vm',
         })
         .state('home.recipes.id', {

@@ -1,10 +1,9 @@
-function RecipeFormController(RecipeService){
+function RecipeFormController($scope, RecipeService){
   var vm = this;
-  // vm.recipes = RecipeService.getRecipes();
 
-  console.log(vm.recipes.map(function(recipe, index){
-    return recipe.user.first_name + recipe.user.last_name;
-  }));
+  vm.name = "";
+  vm.description = '';
+  vm.directions = '';
 
 }
 
