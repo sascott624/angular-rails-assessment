@@ -4,7 +4,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :description
       t.string :directions
-      t.integer :user_id
+      t.boolean :tried, default: false
     end
   end
 end
