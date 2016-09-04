@@ -1,7 +1,9 @@
-<form name='new_recipe_form' ng-submit='vm.submit()'>
-  Name: <input ng-model='vm.name' /><br>
-  Description: <input type="text" ng-model='vm.description' /><br>
-  Directions: <input type="text" ng-model='vm.directions' /><br>
+<form name='new_recipe_form' ng-submit='vm.createRecipe()'>
+  <br>
+  Name: <input ng-model='vm.name' /><br><br>
+  Description: <input type="text" ng-model='vm.description' /><br><br>
+  Directions: <textarea ng-model="vm.directions" form="new_recipe_form" cols="30" rows="10"></textarea> <br>
+  Tried? <input type="checkbox" ng-model='vm.tried' /><br><br>
   <input type="submit" value="Create Recipe">
 
 </form>
