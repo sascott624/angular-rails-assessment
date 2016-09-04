@@ -5,12 +5,26 @@ function RecipeFormController(RecipeService, $state){
   vm.description = '';
   vm.directions = '';
   vm.recipe_tried = false;
-  
+  vm.ingredients = [
+    {name: '',
+    quantity: '',
+    measurement: ''},
+  ];
+
+
   vm.createRecipe = function(){
-    RecipeService.postRecipe(vm.name, vm.description, vm.directions, vm.recipe_tried).then(function(response){
+    RecipeService.postRecipe(vm.name, vm.description, vm.directions, vm.recipe_tried, vm.ingredients).then(function(response){
       console.log(response);
     })
-    // console.log(vm.recipe_tried);
+  }
+
+
+  vm.addIngredient = function(){
+    vm.ingredients.push({
+      name: '',
+      quantity: '',
+      measurement: ''
+    });
   }
 }
 

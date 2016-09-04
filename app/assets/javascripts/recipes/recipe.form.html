@@ -1,12 +1,55 @@
-<form name='new_recipe_form' ng-submit='vm.createRecipe()'>
+<form name='new_recipe_form'>
   <br>
-  Name: <input ng-model='vm.name' /><br><br>
-  Description: <input type="text" ng-model='vm.description' /><br><br>
-  Directions: <textarea ng-model="vm.directions" form="new_recipe_form" cols="30" rows="10"></textarea> <br>
+  Name: <input
+    ng-model='vm.name'
+    required='required'
+    /><br><br>
+
+  Description: <input
+    type="text"
+    ng-model='vm.description'
+    required='required'
+    /><br><br>
+
+  Ingredients: <br>
+  <div ng-repeat="ingredient in vm.ingredients">
+    <input
+      type="text"
+      ng-model="vm.ingredients[$index].name"
+      placeholder="Ingredient name"
+    />
+    <input
+      type="float"
+      ng-model="vm.ingredients[$index].quantity"
+      placeholder="0"
+    />
+    <input
+      type="text"
+      ng-model="vm.ingredients[$index].measurement"
+      placeholder="lbs, cups, etc."
+    />
+  </div>
+  <button ng-click='vm.addIngredient(); $event.stopPropagation()'>Add Ingredient</button>
+<br>
+<br>
+
+  Directions: <textarea
+    ng-model="vm.directions"
+    form="new_recipe_form"
+    cols="30"
+    rows="10">
+  </textarea> <br>
+
   Tried? <input
     type="checkbox"
     ng-model='vm.recipe_tried'
      /> {{ vm.tried }}<br><br>
-  <input type="submit" value="Create Recipe">
+
+  <div ng-show='new_recipe_form.$dirty && new_recipe_form.$valid'>
+
+    <button
+      ng-click='vm.createRecipe()'
+      ng-disable='new_recipe_form.$invalid'>Create Recipe</button>
+  </div>
 
 </form>
