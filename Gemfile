@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'devise'
 gem 'active_model_serializers'
 gem 'angular-rails-templates'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
