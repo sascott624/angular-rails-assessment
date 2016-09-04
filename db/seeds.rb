@@ -1,3 +1,11 @@
+recipes = Recipe.create([
+  {name: "Apples and Peanut Butter", description: "An easy snack", directions: "Slice up the apple, and spread peanut butter to taste.", recipe_tried: true},
+  {name: "Caprese Salad", description: "A simple starter, perfect for summer!", directions: "Slice tomato and mozzarella, and drizzle with oil and vinegar. Add salt and pepper to taste.", recipe_tried: false},
+  {name: "Avocado Toast", description: "A healthy way to start your day", directions: "While toast is toasting, slice avocado. Add avocado to toast, and drizzle with oil. Add salt to taste.", recipe_tried: false},
+  {name: "Peanut Butter, Jelly, & Banana", description: "Classic with a twist", directions: "Spread peanut butter one one half, jelly on the other, and add sliced bananas on top of the peanut butter!", recipe_tried: false},
+  {name: "Spaghetti and Meatballs", description: "A traditional family dinner", directions: "First, add spaghetti to boiling water. Then, shape beef into meatballs and sautee until juices run clear. Once the pasta is cooked, drain excess water, add marinara sauce and meatballs.", recipe_tried: false},
+  {name: "Chicken Salad", description: "A healthy version of a classic recipe", directions: "First, shred cooked chicken in a small bowl. Mix in greek yogurt until chicken is completely coated. Then, chop celery, apples, and grapes into small chunks and add to chicken-yogurt mixture. Serve on bread or in a salad.", recipe_tried: false}])
+
 ingredients = Ingredient.create([{name: "Apple", food_group: "Fruit"},
   {name: "Banana", food_group: "Fruit"}, {name: "Chicken", food_group: "Meat"},
   {name: "Mozzarella", food_group: "Dairy"},{name: "Olives", food_group: "Fruit"},
@@ -14,13 +22,6 @@ ingredients = Ingredient.create([{name: "Apple", food_group: "Fruit"},
   {name: "Mayonnaise", food_group: "Condiment"}, {name: "Milk", food_group: "Dairy"},
   {name: "Greek Yogurt", food_group: "Dairy"}, {name: "Celery", food_group: "Greens/Vegetables"},
   {name: "Grapes", food_group: "Fruit"}])
-
-recipes = Recipe.create([{name: "Apples and Peanut Butter", description: "An easy snack", directions: "Slice up the apple, and spread peanut butter to taste."},
-  {name: "Caprese Salad", description: "A simple starter, perfect for summer!", directions: "Slice tomato and mozzarella, and drizzle with oil and vinegar. Add salt and pepper to taste."},
-  {name: "Avocado Toast", description: "A healthy way to start your day", directions: "While toast is toasting, slice avocado. Add avocado to toast, and drizzle with oil. Add salt to taste."},
-  {name: "Peanut Butter, Jelly, & Banana", description: "Classic with a twist", directions: "Spread peanut butter one one half, jelly on the other, and add sliced bananas on top of the peanut butter!"},
-  {name: "Spaghetti and Meatballs", description: "A traditional family dinner", directions: "First, add spaghetti to boiling water. Then, shape beef into meatballs and sautee until juices run clear. Once the pasta is cooked, drain excess water, add marinara sauce and meatballs."},
-  {name: "Chicken Salad", description: "A healthy version of a classic recipe", directions: "First, shred cooked chicken in a small bowl. Mix in greek yogurt until chicken is completely coated. Then, chop celery, apples, and grapes into small chunks and add to chicken-yogurt mixture. Serve on bread or in a salad."}])
 
 recipe_ingredients = RecipeIngredient.create([
   {recipe_id: 1, ingredient_id: 1, quantity: 1, measurement: "apple"},

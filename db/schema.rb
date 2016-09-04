@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160901230754) do
     t.string  "name"
     t.string  "description"
     t.string  "directions"
-    t.boolean "tried",       default: false
+    t.boolean "recipe_tried"
   end
 
 end
