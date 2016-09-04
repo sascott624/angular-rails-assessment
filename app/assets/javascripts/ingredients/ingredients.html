@@ -2,13 +2,17 @@
 
 <!-- there should be an option to create a new ingredient -->
 
-<div class='dark_blue'>
+<div class='dark_blue ingredients'><div>
   Search Ingredients <input
     type="text"
     ng-model='vm.search'
     ng-change='vm.refilter()'
     ng-model-options='{debounce: 500}'
   />
+  </div>
+  <div>
+    <button><a href="/#/home/new-ingredient">Add a New Ingredient!</a></button>
+  </div>
 </div>
 
 <div class='ingredient_view' ui-view></div>

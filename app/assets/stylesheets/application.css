@@ -85,3 +85,12 @@
   float: right;
   width: 30em;
 }
+
+.ingredients div{
+  display: inline;
+}
+
+.ingredients div button{
+  float: right;
+  margin-right: 30em;
+}

@@ -1,4 +1,4 @@
-function IngredientFormController(IngredientService){
+function IngredientFormController(IngredientService, $state){
   var vm = this;
   vm.hello = 'ingredient form controller';
 
@@ -7,7 +7,7 @@ function IngredientFormController(IngredientService){
 
   vm.createIngredient = function(){
     IngredientService.postIngredient(vm.name, vm.food_group).then(function(response){
-      console.log(response.data.id);
+      $state.go('home.ingredients.id', {id: response.data.id});
     })
   }
 }
