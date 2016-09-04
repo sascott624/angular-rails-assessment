@@ -1,1 +1,5 @@
-<p>{{vm.hello}}</p>
+<form name='new_ingredient_form' ng-submit='vm.createIngredient()'>
+  Name: <input ng-model='vm.name' /><br>
+  Food Group: <input type="text" ng-model='vm.food_group' /><br>
+  <input type="submit" value="Create Ingredient">
+</form>
