@@ -6,7 +6,9 @@ function IngredientFormController(IngredientService){
   vm.food_group = '';
 
   vm.createIngredient = function(){
-    alert('submitting form');
+    IngredientService.postIngredient(vm.name, vm.food_group).then(function(response){
+      console.log(response);
+    })
   }
 }
 
