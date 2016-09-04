@@ -15,7 +15,7 @@
 
 
   <ul class='recipe_list'>
-    <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }} <em> by </em><span> {{ recipe.user.first_name}} {{ recipe.user.last_name}}</span>
+    <li ng-repeat='recipe in vm.filteredRecipes'>{{ recipe.name }}
       <p> {{ recipe.description }} <a href="/#/home/recipes/{{recipe.id}}">View</a></p>
       Tried? <input type="checkbox" ng-model='recipe.tried' > {{recipe.tried}}
     </li>
