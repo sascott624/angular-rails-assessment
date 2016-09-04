@@ -66,6 +66,11 @@ angular
             }
           }
         })
+        .state('home.new-ingredient', {
+          url: '/new-ingredient',
+          templateUrl: 'ingredients/ingredient.form.html',
+          controller: 'IngredientCongroller as vm',
+        })
 
         $urlRouterProvider.otherwise('home');
     });
