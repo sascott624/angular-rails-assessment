@@ -8,13 +8,13 @@ function RecipeService($http){
     return $http.get('/recipes/' + id + '.json');
   }
 
-  vm.postRecipe = function(name, description, directions, recipe_tried, recipe_ingredients){
+  vm.postRecipe = function(name, description, directions, recipe_tried, ingredient_attributes){
     return $http.post('/recipes', {
       name: name,
       description: description,
       directions: directions,
       recipe_tried: recipe_tried,
-      recipe_ingredients: recipe_ingredients,
+      ingredient_attributes: ingredient_attributes,
     })
   }
 }

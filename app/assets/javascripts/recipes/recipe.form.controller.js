@@ -7,7 +7,7 @@ function RecipeFormController(RecipeService, IngredientService, $state){
   vm.directions = '';
   vm.recipe_tried = false;
   vm.recipe_ingredients = [
-    {name: '',
+    {ingredient_id: '',
     quantity: '',
     measurement: ''},
   ];
