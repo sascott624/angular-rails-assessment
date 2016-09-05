@@ -1,5 +1,6 @@
 function IngredientsController(ingredients, $filter) {
     var vm = this;
+
     vm.ingredients = ingredients.data;
     vm.search = '';
 

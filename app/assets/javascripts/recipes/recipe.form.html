@@ -12,7 +12,11 @@
     /><br><br>
 
   Ingredients: <br>
-  <div ng-repeat="ingredient in vm.ingredients">
+  <input
+    type="checkbox"
+    ng-repeat="i in vm.ingredients track by $index"
+    ng-model="i[$index]" value='i.name' {{$index}}>
+  <div ng-repeat="ingredient in vm.recipe_ingredients">
     <input
       type="text"
       ng-model="vm.ingredients[$index].name"
