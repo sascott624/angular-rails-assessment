@@ -1,10 +1,6 @@
 function RecipeFormController(RecipeService, IngredientService, $state){
   var vm = this;
 
-  vm.ingredientsList = IngredientService.getIngredients().then(function(response){
-    vm.ingredients = response.data;
-  });
-
 
   vm.name = "";
   vm.description = '';

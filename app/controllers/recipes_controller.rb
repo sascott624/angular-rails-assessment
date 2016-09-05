@@ -8,6 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def create
+    raise params.inspect
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
       render json: @recipe, status: 201
@@ -46,7 +47,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description, :directions, :recipe_tried, ingredients: [:name, :quantity, :measurement])
+    params.require(:recipe).permit(:name, :description, :directions, :recipe_tried, ingredient_ids: [], ingredient_attributes: [:recipe_id, :ingredient_id, :quantity, :measurement])
   end
 
   def recipe_find
