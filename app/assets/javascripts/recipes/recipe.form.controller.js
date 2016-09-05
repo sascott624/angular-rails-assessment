@@ -7,9 +7,13 @@ function RecipeFormController(RecipeService, IngredientService, $state){
   vm.directions = '';
   vm.recipe_tried = false;
   vm.recipe_ingredients = [
-    {ingredient_id: '',
-    quantity: '',
-    measurement: ''},
+    {quantity: '',
+    measurement: '',
+    ingredient: {
+      id: '',
+      name: "",
+      food_group: ''
+    }},
   ];
 
 
@@ -21,13 +25,15 @@ function RecipeFormController(RecipeService, IngredientService, $state){
 
 
   vm.addIngredient = function(){
-    vm.ingredients.push({
-      name: '',
-      quantity: '',
-      measurement: ''
-    });
-  }
-}
+    vm.ingredients.push({quantity: '',
+    measurement: '',
+    ingredient: {
+      id: '',
+      name: "",
+      food_group: ''
+    }});
+  };
+};
 
 angular
   .module('app')
