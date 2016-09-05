@@ -21,6 +21,11 @@ angular
           url: '/new-recipe',
           templateUrl: 'recipes/recipe.form.html',
           controller: 'RecipeFormController as vm',
+          resolve: {
+            ingredients: function(IngredientService){
+              return IngredientService.getIngredients();
+            }
+          }
         })
         .state('home.recipes.id', {
           url: '/:id',

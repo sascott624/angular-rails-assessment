@@ -12,29 +12,25 @@
     /><br><br>
 
   Ingredients: <br>
-  <!-- <input
-    type="checkbox"
-    ng-repeat="i in vm.ingredients track by $index"
-    ng-model="i[$index]" value='i.name' {{$index}}> -->
   <div ng-repeat="ingredient in vm.recipe_ingredients">
     <input
       type="text"
-      ng-model="vm.ingredients[$index].ingredient.name"
+      ng-model="vm.recipe_ingredients[$index].ingredient.name"
       placeholder="Ingredient name"
-    /> 
+    />
     <input
       type="text"
-      ng-model="vm.ingredients[$index].ingredient.food_group"
+      ng-model="vm.recipe_ingredients[$index].ingredient.food_group"
       placeholder="Ingredient food group"
     />
     <input
       type="float"
-      ng-model="vm.ingredients[$index].quantity"
+      ng-model="vm.recipe_ingredients[$index].quantity"
       placeholder="0"
     />
     <input
       type="text"
-      ng-model="vm.ingredients[$index].measurement"
+      ng-model="vm.recipe_ingredients[$index].measurement"
       placeholder="lbs, cups, etc."
     />
   </div>

@@ -1,6 +1,7 @@
-function RecipeFormController(RecipeService, IngredientService, $state){
+function RecipeFormController(ingredients, RecipeService, $state){
   var vm = this;
 
+  vm.ingredients = ingredients.data;
 
   vm.name = "";
   vm.description = '';
@@ -16,6 +17,10 @@ function RecipeFormController(RecipeService, IngredientService, $state){
     }},
   ];
 
+  vm.alert = function(){
+    console.log(vm.recipe_ingredients);
+  }
+
 
   vm.createRecipe = function(){
     RecipeService.postRecipe(vm.name, vm.description, vm.directions, vm.recipe_tried, vm.recipe_ingredients).then(function(response){
@@ -25,7 +30,7 @@ function RecipeFormController(RecipeService, IngredientService, $state){
 
 
   vm.addIngredient = function(){
-    vm.ingredients.push({quantity: '',
+    vm.recipe_ingredients.push({quantity: '',
     measurement: '',
     ingredient: {
       id: '',
