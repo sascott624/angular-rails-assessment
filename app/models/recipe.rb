@@ -3,8 +3,8 @@ class Recipe < ApplicationRecord
   has_many :ingredients, through: :recipe_ingredients
 
   def ingredient_ids=(ingredients)
-  ingredients.values.each do |id|
-    i = Ingredient.find_or_create_by(id: id)
+  ingredients.each do |i|
+    ingredient = Ingredient.where(id: i)
     self.ingredients << ingredient
   end
 end

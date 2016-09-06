@@ -1,45 +1,45 @@
 <form name='new_recipe_form'>
   <br>
   Name: <input
-    ng-model='vm.name'
+    ng-model='vm.recipe.name'
     required='required'
     /><br><br>
 
   Description: <input
     type="text"
-    ng-model='vm.description'
+    ng-model='vm.recipe.description'
     required='required'
     /><br><br>
 
-  Ingredients: <br>
-  <div ng-repeat="ingredient in vm.recipe_ingredients">
+  <!-- Ingredients: <br>
+  <div ng-repeat="ingredient in vm.recipe.recipe_ingredients">
     <input
       type="text"
-      ng-model="vm.recipe_ingredients[$index].ingredient.name"
+      ng-model="vm.recipe.recipe_ingredients[$index].ingredient.name"
       placeholder="Ingredient name"
     />
     <input
       type="text"
-      ng-model="vm.recipe_ingredients[$index].ingredient.food_group"
+      ng-model="vm.recipe.recipe_ingredients[$index].ingredient.food_group"
       placeholder="Ingredient food group"
     />
     <input
       type="float"
-      ng-model="vm.recipe_ingredients[$index].quantity"
+      ng-model="vm.recipe.recipe_ingredients[$index].quantity"
       placeholder="0"
     />
     <input
       type="text"
-      ng-model="vm.recipe_ingredients[$index].measurement"
+      ng-model="vm.recipe.recipe_ingredients[$index].measurement"
       placeholder="lbs, cups, etc."
     />
   </div>
-  <button ng-click='vm.addIngredient(); $event.stopPropagation()'>Add Ingredient</button>
+  <button ng-click='vm.addIngredient(); $event.stopPropagation()'>Add Ingredient</button> -->
 <br>
 <br>
 
   Directions: <textarea
-    ng-model="vm.directions"
+    ng-model="vm.recipe.directions"
     form="new_recipe_form"
     cols="30"
     rows="10">
@@ -47,7 +47,7 @@
 
   Tried? <input
     type="checkbox"
-    ng-model='vm.recipe_tried'
+    ng-model='vm.recipe.recipe_tried'
      /> {{ vm.tried }}<br><br>
 
   <div ng-show='new_recipe_form.$dirty && new_recipe_form.$valid'>
