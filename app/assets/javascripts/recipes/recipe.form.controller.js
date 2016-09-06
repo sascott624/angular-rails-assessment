@@ -8,7 +8,21 @@ function RecipeFormController($scope, ingredients, RecipeService, $filter, $stat
     description: '',
     directions: '',
     recipe_tried: false,
-    ingredient_ids: [ ],
+    recipe_ingredients: [{
+      quantity: '',
+      measurement: '',
+      ingredient: {
+        name: ''
+      }
+    }],
+  };
+
+  vm.addIngredient = function(){
+    vm.recipe.recipe_ingredients.push({quantity: '',
+    measurement: '',
+    ingredient: {
+      name: "",
+    }});
   };
 
   vm.selectedIngredients = function selectedIngredients(){
@@ -16,9 +30,7 @@ function RecipeFormController($scope, ingredients, RecipeService, $filter, $stat
   };
 
   vm.createRecipe = function(){
-    vm.recipe.ingredient_ids = vm.selectedIngredients().map(function(ing){
-      return ing.id;
-    });
+    // console.log(vm.recipe);
     RecipeService.postRecipe(vm.recipe).then(function(response){
       console.log(response);
     })
