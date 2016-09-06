@@ -1,7 +1,5 @@
 <h1 class='orange'>Recipes</h1>
 
-<!-- there should be an option to create a new recipe -->
-
 <div class='dark_blue'>
   Search Recipes <input
     type="text"
@@ -10,6 +8,12 @@
     ng-model-options="{debounce: 500}"
   />
 </div>
+<br>
+<button ng-click='vm.untried()'>Untried Recipes</button>
+<button ng-click='vm.tried()'>Tried Recipes</button>
+<br><br>
+<button><a href="/#/home/new-recipe">Add a New Recipe!</a></button>
+
 
   <div class='recipe_view' ui-view></div>
 
@@ -19,5 +23,3 @@
       <p> {{ recipe.description }} <a href="/#/home/recipes/{{recipe.id}}">View</a></p>
     </li>
   </ul>
-
-  <button><a href="/#/home/new-recipe">Add a New Recipe!</a></button>

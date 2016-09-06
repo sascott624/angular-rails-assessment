@@ -9,6 +9,15 @@ function RecipesController(recipes, $filter) {
 
     vm.refilter();
 
+    vm.untried = function(){
+      vm.filteredRecipes = $filter('untried')(vm.recipes, true);
+    }
+
+    vm.tried = function(){
+      vm.filteredRecipes = $filter('tried')(vm.recipes, false);
+    }
+
+
 }
 
 angular
