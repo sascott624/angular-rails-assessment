@@ -30,9 +30,8 @@ function RecipeFormController($scope, ingredients, RecipeService, $filter, $stat
   };
 
   vm.createRecipe = function(){
-    // console.log(vm.recipe);
     RecipeService.postRecipe(vm.recipe).then(function(response){
-      console.log(response);
+      $state.go('home.recipes.id', {id: response.data.id});
     })
   }
 
