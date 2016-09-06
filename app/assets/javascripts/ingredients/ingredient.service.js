@@ -13,6 +13,12 @@ function IngredientService($http){
      food_group: food_group
     });
   }
+
+  this.patchIngredient = function(ingredient, food_group){
+    return $http.patch('/ingredients/' + ingredient.id, {
+      food_group: food_group,
+    })
+  }
 }
 
 angular

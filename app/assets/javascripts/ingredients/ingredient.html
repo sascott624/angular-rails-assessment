@@ -1,4 +1,13 @@
 <h1>{{vm.ingredient.name}}</h1>
-<h3>{{vm.ingredient.food_group}}</h3>
+<h3 ng-if='vm.ingredient.food_group'>{{vm.ingredient.food_group}}</h3>
 
-<!-- suggest recipes? -->
+<div ng-if='!vm.ingredient.food_group'>
+  <h3><em> This ingredient hasn't been categorized yet! Please update it! </em></h3>
+  <form name='ingredient_update_form'>
+    <input
+      type="text"
+      ng-model='vm.food_group'
+      placeholder="Food Group" />
+  </form>
+  <button ng-click='vm.updateIngredient()'>Update</button>
+</div>

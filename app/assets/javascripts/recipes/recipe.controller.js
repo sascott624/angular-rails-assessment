@@ -1,4 +1,4 @@
-function RecipeController(recipe, RecipeService) {
+function RecipeController(recipe, RecipeService, $state) {
     var vm = this;
     vm.recipe = recipe.data;
 
@@ -6,7 +6,7 @@ function RecipeController(recipe, RecipeService) {
 
     vm.updateRecipe = function(){
       RecipeService.updateRecipe(vm.recipe).then(function(response){
-        console.log(response);
+        $state.go('home.recipes');
       });
     }
 }
