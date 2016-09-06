@@ -12,20 +12,20 @@
     /><br><br>
 
   Ingredients: <br>
-  <div ng-repeat="ingredient in vm.recipe.recipe_ingredients">
+  <div ng-repeat="ingredient in vm.recipe.recipe_ingredients_attributes">
     <input
       type="text"
-      ng-model="vm.recipe.recipe_ingredients[$index].ingredient.name"
+      ng-model="vm.recipe.recipe_ingredients_attributes[$index].ingredient.name"
       placeholder="Ingredient name"
     />
     <input
       type="float"
-      ng-model="vm.recipe.recipe_ingredients[$index].quantity"
+      ng-model="vm.recipe.recipe_ingredients_attributes[$index].quantity"
       placeholder="0"
     />
     <input
       type="text"
-      ng-model="vm.recipe.recipe_ingredients[$index].measurement"
+      ng-model="vm.recipe.recipe_ingredients_attributes[$index].measurement"
       placeholder="lbs, cups, etc."
     />
   </div>

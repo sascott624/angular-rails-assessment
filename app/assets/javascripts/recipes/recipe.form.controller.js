@@ -8,7 +8,7 @@ function RecipeFormController($scope, ingredients, RecipeService, $filter, $stat
     description: '',
     directions: '',
     recipe_tried: false,
-    recipe_ingredients: [{
+    recipe_ingredients_attributes: [{
       quantity: '',
       measurement: '',
       ingredient: {
@@ -18,7 +18,7 @@ function RecipeFormController($scope, ingredients, RecipeService, $filter, $stat
   };
 
   vm.addIngredient = function(){
-    vm.recipe.recipe_ingredients.push({quantity: '',
+    vm.recipe.recipe_ingredients_attributes.push({quantity: '',
     measurement: '',
     ingredient: {
       name: "",
