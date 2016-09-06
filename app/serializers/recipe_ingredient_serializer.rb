@@ -1,6 +1,7 @@
 class RecipeIngredientSerializer < ActiveModel::Serializer
-  attributes :quantity, :measurement, :ingredient
-  belongs_to :recipe
+  attributes :quantity, :measurement
+  # belongs_to :recipe
+  # belongs_to :ingredient
 end
 
 # class RecipeIngredientSerializer < ActiveModel::Serializer

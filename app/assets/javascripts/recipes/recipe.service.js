@@ -17,6 +17,12 @@ function RecipeService($http){
       recipe_ingredients: recipe_ingredients,
     })
   }
+
+  // vm.updateRecipe = function(recipe){
+  //   return $http.patch('/recipes/' + recipe.id, {
+  //     recipe_tried: recipe.recipe_tried
+  //   });
+  // }
 }
 
 angular
