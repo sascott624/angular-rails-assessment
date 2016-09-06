@@ -11,31 +11,19 @@
     required='required'
     /><br><br>
 
-  <!-- Ingredients: <br>
-  <div ng-repeat="ingredient in vm.recipe.recipe_ingredients">
+  Ingredients:
+  <label ng-repeat='i in vm.ingredients'>
     <input
-      type="text"
-      ng-model="vm.recipe.recipe_ingredients[$index].ingredient.name"
-      placeholder="Ingredient name"
-    />
-    <input
-      type="text"
-      ng-model="vm.recipe.recipe_ingredients[$index].ingredient.food_group"
-      placeholder="Ingredient food group"
-    />
-    <input
-      type="float"
-      ng-model="vm.recipe.recipe_ingredients[$index].quantity"
-      placeholder="0"
-    />
-    <input
-      type="text"
-      ng-model="vm.recipe.recipe_ingredients[$index].measurement"
-      placeholder="lbs, cups, etc."
-    />
-  </div>
-  <button ng-click='vm.addIngredient(); $event.stopPropagation()'>Add Ingredient</button> -->
+    type="checkbox"
+    name="selectedIngredients[]"
+    value="{{i.name}}"
+    ng-model="i.selected"
+  > {{i.name}}
+  </label>
+
 <br>
+
+<button ng-click='vm.alert()'></button>
 <br>
 
   Directions: <textarea

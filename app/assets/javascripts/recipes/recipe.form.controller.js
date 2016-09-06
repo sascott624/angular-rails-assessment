@@ -1,4 +1,4 @@
-function RecipeFormController(ingredients, RecipeService, $state){
+function RecipeFormController(ingredients, RecipeService, $filter,$state){
   var vm = this;
 
   vm.ingredients = ingredients.data;
@@ -8,12 +8,17 @@ function RecipeFormController(ingredients, RecipeService, $state){
     description: '',
     directions: '',
     recipe_tried: false,
-    ingredient_ids: [1,2]
+    ingredient_ids: [ ],
+  };
+
+  vm.selectedIngredients = function selectedIngredients(){
+    return $filter('filter')(vm.ingredients, { selected: true })
   };
 
   vm.alert = function(){
-    console.log(vm.recipe_ingredients);
+    console.log(vm.selectedIngredients());
   }
+
 
   vm.createRecipe = function(){
     RecipeService.postRecipe(vm.recipe).then(function(response){
