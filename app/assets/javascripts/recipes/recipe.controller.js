@@ -2,8 +2,12 @@ function RecipeController(recipe, RecipeService) {
     var vm = this;
     vm.recipe = recipe.data;
 
+    console.log(vm.recipe);
+
     vm.updateRecipe = function(){
-      console.log(vm.recipe);
+      RecipeService.updateRecipe(vm.recipe).then(function(response){
+        console.log(response);
+      });
     }
 }
 

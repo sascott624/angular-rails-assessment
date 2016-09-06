@@ -14,11 +14,11 @@ function RecipeService($http){
     })
   }
 
-  // vm.updateRecipe = function(recipe){
-  //   return $http.patch('/recipes/' + recipe.id, {
-  //     recipe_tried: recipe.recipe_tried
-  //   });
-  // }
+  vm.updateRecipe = function(r){
+    return $http.patch('/recipes/' + r.id, {
+      recipe: r,
+    });
+  }
 }
 
 angular
