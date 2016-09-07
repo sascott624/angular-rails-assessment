@@ -4,9 +4,10 @@ Specs:
 - [x] Use Angular to build the app
 - [x] Must contain some sort of nested views
 (SPA has a 'home' view, nested within which are the 'home.recipes', 'home.ingredients', and 'home.discover' views. These views are nested further with 'home.recipes.id' and 'home.ingredients.id', which display a given recipe/ingredient based on the $state params)
-- [ ] Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
-(both recipe list and ingredient list can be searched - this functionality is available in the 'home.recipes' and 'home.ingredients' views)
-- [ ] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+- [x] Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
+(both recipe list and ingredient list can be searched - this functionality is available in the 'home.recipes' and 'home.ingredients' views. In the recipes index, the user can view only tried recipes / only untried recipes)
+- [x] Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+(User can mark a recipe as 'tried')
 - [x] Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
 - [x] Data should be validated in Angular before submission
 (ingredient fields are required and have a minlength of 3 - user is unable to click 'submit' unless these fields are valid)

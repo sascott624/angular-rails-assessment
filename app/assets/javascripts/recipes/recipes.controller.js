@@ -10,11 +10,11 @@ function RecipesController(recipes, $filter) {
     vm.refilter();
 
     vm.untried = function(){
-      vm.filteredRecipes = $filter('tried')(vm.recipes, true);
+      vm.filteredRecipes = $filter('tried')(vm.recipes, false);
     }
 
     vm.tried = function(){
-      vm.filteredRecipes = $filter('tried')(vm.recipes, false);
+      vm.filteredRecipes = $filter('tried')(vm.recipes, true);
     }
 
 
