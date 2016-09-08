@@ -14,8 +14,10 @@
 <h3>Directions</h3>
 <p>{{ vm.recipe.directions }}</p>
 
-<p><em> Have you tried this recipe?</em></p> <input type="checkbox" ng-model='vm.recipe.recipe_tried'
-ng-click='vm.updateRecipe()' > 
+<p ng-hide='vm.recipe.recipe_tried'><em> Have you tried this recipe?</em></p>
+<p ng-show='vm.recipe.recipe_tried'><em> You've tried this recipe!</em></p>
+<input type="checkbox" ng-model='vm.recipe.recipe_tried'
+ng-click='vm.updateRecipe()' >
 
 
 <!--
