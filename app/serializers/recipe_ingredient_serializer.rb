@@ -1,10 +1,10 @@
 class RecipeIngredientSerializer < ActiveModel::Serializer
   attributes :quantity, :measurement, :ingredient
 
-    def ingredient
-      a = Ingredient.find_by(id: object.ingredient_id)
-      IngredientSerializer.new(a, scope: scope, root: false)
-    end
+  def ingredient
+    a = Ingredient.find_by(id: object.ingredient_id)
+#    IngredientSerializer.new(a, scope: scope, root: false)
+  end
 end
 
 # class RecipeIngredientSerializer < ActiveModel::Serializer

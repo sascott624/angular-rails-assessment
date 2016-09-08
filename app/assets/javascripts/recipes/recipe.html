@@ -7,7 +7,7 @@
 <h3>Ingredients</h3>
 <ul>
   <li ng-repeat="i in vm.recipe.recipe_ingredients">
-    {{i.ingredient.name}} - {{ i.quantity }} {{ i.measurement}}
+    <a href="/#/home/ingredients/{{i.ingredient.id}}">{{i.ingredient.name}}</a> - {{ i.quantity }} {{ i.measurement}}
   </li>
 </ul>
 

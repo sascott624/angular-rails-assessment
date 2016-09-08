@@ -11,3 +11,12 @@
   </form>
   <button ng-click='vm.updateIngredient()'>Update</button>
 </div>
+
+<div>
+  <ul>
+    <li ng-repeat='recipe in vm.ingredient.recipes'>
+      {{ recipe.name }} - <a href="/#/home/recipes/{{recipe.id}}"> View Recipe </a>
+    </li>
+  </ul>
+
+</div>
