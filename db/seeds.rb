@@ -25,7 +25,7 @@ ingredients = Ingredient.create([{name: "Apple", food_group: "Fruit"},
 
 recipe_ingredients = RecipeIngredient.create([
   {recipe_id: 1, ingredient_id: 1, quantity: 1, measurement: "apple"},
-  {recipe_id: 1, ingredient_id: 8, quantity: 1, measurement: "tbs"},
+  {recipe_id: 1, ingredient_id: 9, quantity: 1, measurement: "tbs"},
   {recipe_id: 2, ingredient_id: 4, quantity: 0.25, measurement: "lb"},
   {recipe_id: 2, ingredient_id: 21, quantity: 1, measurement: "tomato"},
   {recipe_id: 2, ingredient_id: 18, quantity: 1, measurement: "tbs"},
