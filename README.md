@@ -35,7 +35,7 @@ Lastly, the Discover page will query the recipe database for a random recipe, an
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Lindsey Wells
+Copyright (c) 2016 Savannah Scott
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
